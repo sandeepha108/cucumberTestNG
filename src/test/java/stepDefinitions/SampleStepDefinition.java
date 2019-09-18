@@ -3,6 +3,9 @@ package stepDefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
+
+import org.testng.Assert;
+
 import cucumber.api.java.en.And;
 
 
@@ -16,7 +19,7 @@ public class SampleStepDefinition {
 
 	@Given("^that I am logged into SAP HANA$")
 	public void that_i_am_logged_into_sap_hana() throws Throwable {
-		System.out.println("hello");
+		Assert.assertTrue(false);
 	}
 
 	@When("^I enter the provider order in CRM$")
@@ -52,6 +55,7 @@ public class SampleStepDefinition {
 	@And("^create \"([^\"]*)\" business partner$")
 	public void create_something_business_partner(String strArg1) throws Throwable {
 		System.out.println(strArg1);
+		Assert.assertTrue(true);
 	}
 
 }
